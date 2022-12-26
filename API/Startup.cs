@@ -21,10 +21,10 @@ namespace API
         public string GetConnectionString(string name)
         {
             string conStr = Configuration.GetConnectionString(name);
-            if (String.IsNullOrEmpty(conStr))
-            {
-                conStr = Environment.GetEnvironmentVariable($"SQLAZURECONNSTR_{name}", EnvironmentVariableTarget.Process);
-            }
+            //if (String.IsNullOrEmpty(conStr))
+            //{
+            //    conStr = Environment.GetEnvironmentVariable($"SQLAZURECONNSTR_{name}", EnvironmentVariableTarget.Process);
+            //}
             return conStr;
         }
         // This method gets called by the runtime. Use this method to add services to the container.
